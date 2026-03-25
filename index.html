@@ -58,14 +58,37 @@
             text-align: left;
             margin-bottom: 3rem;
         }
-
+/* สไตล์การ์ดบริการแบบใหม่ */
         .card {
-            background: #fff;
+            background: #3498db; /* เปลี่ยนพื้นหลังเป็นสีฟ้า */
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid #3498db;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease; /* ทำให้การตอบสนองนุ่มนวล */
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: left;
         }
+
+        /* เปลี่ยนสีตัวอักษรภายในการ์ดให้เป็นสีขาวเพื่อให้ตัดกับพื้นหลังสีฟ้า */
+        .card h3 { 
+            color: #ffffff; 
+            margin-top: 0; 
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .card p { 
+            color: #f0f0f0; 
+            font-size: 0.95rem;
+        }
+
+        /* การตอบสนองเมื่อเลื่อนเมาส์ไปวาง (Hover) */
+        .card:hover {
+            background: #2980b9; /* เปลี่ยนเป็นสีฟ้าเข้มขึ้นเล็กน้อย */
+            transform: translateY(-10px) scale(1.02); /* ยกตัวขึ้นและขยายขนาดเล็กน้อย */
+            box-shadow: 0 12px 25px rgba(52, 152, 219, 0.4); /* เพิ่มเงาเรืองแสงสีฟ้า */
+            cursor: pointer;
+        }
+        
 
         .btn {
             display: inline-block;
