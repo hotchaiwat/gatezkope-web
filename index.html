@@ -34,6 +34,7 @@
             display: flex;
             flex-direction: column;
             align-items: center; /* จัดให้ GATEzKOPE และ Slogan ตรงกันพอดี */
+            justify-content: center;
         }
 
         /* วิดีโอ Logo ขนาดเล็กด้านซ้าย */
@@ -51,16 +52,20 @@
             color: #00f2ff;
             text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
             margin: 0;
+            line-height: 0.9; /* ลดความสูงบรรทัดเพื่อให้ Slogan ขยับขึ้นมาชิด */
             letter-spacing: 2px;
         }
 
         .main-slogan {
             font-size: 1.8rem; /* ขยายขนาดให้เด่นขึ้น */
             color: #f1c40f; /* สีเหลืองทอง */
-            margin-top: 15px;
+            margin: 0px;
+            padding-top: 5px; /* ใช้ padding เล็กน้อยเพื่อกะระยะห่างจากชื่อด้านบน */
             font-weight: 700; /* ปรับให้ตัวหนาขึ้น */
             text-align: center; /* จัดให้อยู่ตรงกลาง */
             text-transform: uppercase; /* (ตัวเลือกเสริม) ปรับเป็นตัวพิมพ์ใหญ่ทั้งหมดเพื่อให้ดูมั่นคงขึ้น */
+            text-shadow: 0 0 8px rgba(241, 196, 15, 0.6);
+            width: 100%; /* บังคับให้กินพื้นที่เต็มเพื่อการจัดกึ่งกลางที่แม่นยำ */
             letter-spacing: 1px;
             
             /* เพิ่มเอฟเฟกต์เรืองแสงสีเหลือง */
@@ -142,6 +147,7 @@
         <video class="header-video" autoplay muted loop playsinline>
             <source src="Logo.mp4" type="video/mp4">
         </video>
+<div class="brand-text-group">
         <div class="neon-text">GATEzKOPE</div>
     <p class="main-slogan">Flowing Secure Path.</p>
     </div>
