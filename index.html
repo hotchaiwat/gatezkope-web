@@ -5,28 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GATEzKOPE - Flowing Secure Path</title>
     <style>
+        /* --- ส่วน CSS เริ่มต้นตรงนี้ --- */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             line-height: 1.6;
             color: #333;
-            background-color: #ffffff; /* ปรับเป็นสีขาวตามที่คุณต้องการ */
+            background-color: #ffffff;
         }
+
         header {
             background: #2c3e50;
             color: #ffffff;
-            padding: 4rem 1rem 3rem;
+            padding: 3rem 1rem 2.5rem;
             text-align: center;
         }
 
-        /* สไตล์ตัวอักษร GATEzKOPE สีฟ้าเรืองแสง */
+        /* จัดกลุ่ม Logo วิดีโอ และ ชื่อแบรนด์ */
+        .brand-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* วิดีโอ Logo ขนาดเล็กด้านซ้าย */
+        .header-video {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+        }
+
         .neon-text {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: bold;
             color: #00f2ff;
-            text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff, 0 0 40px #00f2ff;
+            text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
             margin: 0;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .main-slogan {
@@ -48,47 +67,36 @@
             height: auto;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
+        /* สไตล์การ์ดบริการสีฟ้าและการตอบสนอง */
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            text-align: left;
             margin-bottom: 3rem;
         }
-/* สไตล์การ์ดบริการแบบใหม่ */
+
         .card {
-            background: #3498db; /* เปลี่ยนพื้นหลังเป็นสีฟ้า */
+            background: #3498db; /* พื้นหลังสีฟ้า */
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease; /* ทำให้การตอบสนองนุ่มนวล */
-            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
             text-align: left;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* เปลี่ยนสีตัวอักษรภายในการ์ดให้เป็นสีขาวเพื่อให้ตัดกับพื้นหลังสีฟ้า */
-        .card h3 { 
-            color: #ffffff; 
-            margin-top: 0; 
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .card p { 
-            color: #f0f0f0; 
-            font-size: 0.95rem;
-        }
+        .card h3 { color: #ffffff; margin-top: 0; }
+        .card p { color: #f0f0f0; font-size: 0.95rem; }
 
-        /* การตอบสนองเมื่อเลื่อนเมาส์ไปวาง (Hover) */
         .card:hover {
-            background: #2980b9; /* เปลี่ยนเป็นสีฟ้าเข้มขึ้นเล็กน้อย */
-            transform: translateY(-10px) scale(1.02); /* ยกตัวขึ้นและขยายขนาดเล็กน้อย */
-            box-shadow: 0 12px 25px rgba(52, 152, 219, 0.4); /* เพิ่มเงาเรืองแสงสีฟ้า */
+            background: #2980b9; /* ฟ้าเข้มขึ้นเมื่อวางเมาส์ */
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(52, 152, 219, 0.4);
             cursor: pointer;
         }
-        
 
         .btn {
             display: inline-block;
@@ -104,36 +112,30 @@
 
         .btn:hover { background: #2980b9; transform: scale(1.05); }
 
-        /* สไตล์สำหรับวิดีโอ Logo ด้านล่าง */
-        .video-container {
-            margin-top: 5rem;
-            margin-bottom: 2rem;
-        }
-
-        video {
-            max-width: 300px; /* ปรับขนาดวิดีโอตามความเหมาะสม */
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
         footer {
             text-align: center;
             padding: 3rem 1rem;
             background: #f8f9fa;
             color: #7f8c8d;
+            margin-top: 4rem;
         }
+        /* --- ส่วน CSS สิ้นสุดตรงนี้ --- */
     </style>
 </head>
 <body>
 
 <header>
-    <div class="neon-text">GATEzKOPE</div>
+    <div class="brand-container">
+        <video class="header-video" autoplay muted loop playsinline>
+            <source src="Logo.mp4" type="video/mp4">
+        </video>
+        <div class="neon-text">GATEzKOPE</div>
+    </div>
     <p class="main-slogan">Flowing Secure Path.</p>
 </header>
 
 <div class="container">
     <img src="main1.jpg" alt="GATEzKOPE Main Visual" class="hero-image">
-    <img src="swing22.jpg" alt="GATEzKOPE Secondary Visual" class="hero-image">
 
     <h2>ยกระดับความปลอดภัยด้วยเทคโนโลยีที่เหนือกว่า</h2>
     <p style="color: #666; font-size: 1.1rem; margin-bottom: 3rem;">
@@ -156,13 +158,6 @@
     </div>
 
     <a href="mailto:contact@gatezkope.com" class="btn">ติดต่อสอบถามข้อมูล</a>
-
-    <div class="video-container">
-        <video autoplay muted loop playsinline>
-            <source src="Logo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
 </div>
 
 <footer>
