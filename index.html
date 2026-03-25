@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GATEzKOPE - Security & Access Control</title>
+    <title>GATEzKOPE - Flowing Secure Path</title>
     <style>
         /* CSS พื้นฐานเพื่อความสวยงาม */
         body {
@@ -14,11 +14,19 @@
             background-color: #f4f7f6;
         }
         header {
-            background: #2c3e50;
+            background: #2c3e50; /* สีน้ำเงินเข้ม */
             color: #ffffff;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem 2rem; /* เพิ่ม padding ด้านบนเล็กน้อย */
             text-align: center;
         }
+        
+        /* สไตล์สำหรับโลโก้ */
+        .header-logo {
+            max-width: 280px; /* กำหนดขนาดโลโก้ตามต้องการ */
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+
         .container {
             max-width: 1000px;
             margin: 2rem auto;
@@ -32,43 +40,67 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
         }
-        h1 { margin-bottom: 0.5rem; }
-        p.subtitle { font-size: 1.2rem; color: #666; margin-bottom: 2rem; }
+        
+        /* สไตล์สำหรับ Slogan */
+        p.main-slogan {
+            font-size: 1.3rem;
+            color: #bdc3c7; /* สีเทาอ่อน */
+            margin-top: 0;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        h2 { color: #2c3e50; margin-top: 1rem; }
+        p.subtitle { font-size: 1.1rem; color: #666; margin-bottom: 3rem; }
         
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
+            text-align: left; /* เปลี่ยนเนื้อหาในการ์ดเป็นชิดซ้าย */
         }
         .card {
             background: #fff;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
         }
+        .card:hover {
+            transform: translateY(-5px); /* เพิ่มลูกเล่นเมื่อเอาเมาส์ไปชี้ */
+        }
+        .card h3 { color: #3498db; margin-top: 0; }
+        
         footer {
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem 3rem;
             font-size: 0.9rem;
             color: #888;
+            background-color: #ecf0f1;
+            margin-top: 4rem;
         }
         .btn {
             display: inline-block;
-            background: #e67e22;
+            background: #3498db; /* เปลี่ยนเป็นสีฟ้าเพื่อให้เข้ากับโลโก้ */
             color: #fff;
-            padding: 0.8rem 2rem;
+            padding: 0.8rem 2.5rem;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
+            border-radius: 25px; /* ปรับให้ขอบมนขึ้น */
+            margin-top: 2rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #2980b9;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>GATEzKOPE</h1>
-    <p>Innovative Access Control & Network Solutions</p>
+    <img src="gatezkope-logo.png" alt="GATEzKOPE - Flowing Secure Path" class="header-logo">
+    <p class="main-slogan">Flowing Secure Path.</p>
 </header>
 
 <div class="container">
@@ -97,6 +129,7 @@
 
 <footer>
     <p>&copy; 2026 GATEzKOPE Co., Ltd. All Rights Reserved.</p>
+    <p>GATEzKOPE.com | Flowing Secure Path.</p>
 </footer>
 
 </body>
